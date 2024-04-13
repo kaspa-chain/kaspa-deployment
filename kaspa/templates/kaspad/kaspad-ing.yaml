@@ -4,9 +4,9 @@ metadata:
   name: kaspad-api-ing
   annotations:
     nginx.ingress.kubernetes.io/backend-protocol: 'GRPC'
-    nginx.ingress.kubernetes.io/force-ssl-redirect: 'true'
-    nginx.ingress.kubernetes.io/grpc-backend: 'true'
-    nginx.ingress.kubernetes.io/protocol: 'h2c'
+  #  nginx.ingress.kubernetes.io/force-ssl-redirect: 'true'
+  #  nginx.ingress.kubernetes.io/grpc-backend: 'true'
+  #  nginx.ingress.kubernetes.io/protocol: 'h2c'
     #nginx.ingress.kubernetes.io/ssl-redirect: "true"
   #  nginx.ingress.kubernetes.io/proxy-body-size: 50m
   #  nginx.org/client-max-body-size: 50m
@@ -23,7 +23,7 @@ spec:
             name: kaspa-{{ .Values.kaspad.envAlias }}-kaspad
             port:
               number: 16110
-  tls:
-  - secretName: kaspad-selfsigned-cert-secret
-    hosts:
-      - "{{ .Values.kaspad.kaspadApiDomain }}"
+  #tls:
+  #- secretName: kaspad-selfsigned-cert-secret
+  #  hosts:
+  #    - "{{ .Values.kaspad.kaspadApiDomain }}"
