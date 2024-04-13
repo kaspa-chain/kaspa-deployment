@@ -3,10 +3,10 @@ kind: PersistentVolumeClaim
 metadata:
   name: kaspad-pvc
 spec:
-  volumeName: kaspad-pv
   accessModes:
-    - ReadWriteOnce
-  volumeMode: Filesystem
+  - ReadWriteOnce
   resources:
     requests:
       storage: 250Gi
+  storageClassName: standard
+  volumeMode: Filesystem
