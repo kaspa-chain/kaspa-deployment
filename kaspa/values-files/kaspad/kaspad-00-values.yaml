@@ -15,6 +15,11 @@ kaspad:
     strategy:
       type: Recreate
 
+    securityContext:
+      fsGroup: 999
+      runAsUser: 999
+      runAsGroup: 999
+
     resources:
       limits:
         cpu: 700m
@@ -29,9 +34,9 @@ kaspad:
     image:
       name: asia-southeast1-docker.pkg.dev/its-artifact-commons/kaspa/kaspad
 
-    #volumeMounts:
-    #  - name: data-dir
-    #    mountPath: /home/kaspa/.rusty-kaspa
+    volumeMounts:
+      - name: data-dir
+        mountPath: /home/kaspa/.rusty-kaspa
 
     volumes:
       - name: data-dir
