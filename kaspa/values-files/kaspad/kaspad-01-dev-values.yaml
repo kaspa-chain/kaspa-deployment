@@ -1,4 +1,6 @@
 kaspad:
+  kaspadApiDomain: grpc-dev.kaspa-chain.net
+  envAlias: dev
   pods:
     env:
       - name: TZ

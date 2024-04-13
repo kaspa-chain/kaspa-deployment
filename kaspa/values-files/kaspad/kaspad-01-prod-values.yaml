@@ -1,4 +1,5 @@
 kaspad:
+  envAlias: prod
   pods:
     env:
       - name: TZ
