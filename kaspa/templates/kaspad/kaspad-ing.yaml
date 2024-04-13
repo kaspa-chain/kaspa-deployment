@@ -8,13 +8,13 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-  - host: "{{ .Values.kaspas.kaspadApiDomain }}"
+  - host: "{{ .Values.kaspad.kaspadApiDomain }}"
     http:
       paths:
       - pathType: ImplementationSpecific
         path: "/"
         backend:
           service:
-            name: kaspa-{{ .Values.kaspas.envAlias }}-kaspad
+            name: kaspa-{{ .Values.kaspad.envAlias }}-kaspad
             port:
               number: 16110
