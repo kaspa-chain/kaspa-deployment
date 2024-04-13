@@ -13,3 +13,5 @@ spec:
     name: selfsigned-issuer
     kind: Issuer
     group: cert-manager.io
+  dnsNames:
+    - "{{ .Values.kaspad.kaspadApiDomain }}"
