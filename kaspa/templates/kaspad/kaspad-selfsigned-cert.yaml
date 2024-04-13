@@ -1,0 +1,15 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: kaspad-selfsigned-cert
+spec:
+  isCA: true
+  commonName: "{{ .Values.kaspad.kaspadApiDomain }}"
+  secretName: root-secret
+  privateKey:
+    algorithm: ECDSA
+    size: 256
+  issuerRef:
+    name: kaspad-selfsigned-cert-secret
+    kind: Issuer
+    group: cert-manager.io

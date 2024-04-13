@@ -21,6 +21,6 @@ spec:
             port:
               number: 16110
   tls:
-  - secretName: dummy-secret
+  - secretName: kaspad-selfsigned-cert-secret
     hosts:
       - "{{ .Values.kaspad.kaspadApiDomain }}"
