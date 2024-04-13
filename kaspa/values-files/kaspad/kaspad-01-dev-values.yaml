@@ -3,3 +3,6 @@ kaspad:
     env:
       - name: TZ
         value: Asia/Bangkok
+
+      - name: RUST_BACKTRACE
+        value: '1'

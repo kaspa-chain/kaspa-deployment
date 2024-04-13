@@ -12,6 +12,8 @@ kaspad:
   pods:
     controller: deployment
     replicas: 1
+    strategy:
+      type: recreate
 
     resources:
       limits:
@@ -27,15 +29,14 @@ kaspad:
     image:
       name: asia-southeast1-docker.pkg.dev/its-artifact-commons/kaspa/kaspad
 
-    #volumeMounts:
-    #  - name: discovery-config
-    #    mountPath: /usr/src/app/src/config/grpc/development.json
-    #    subPath: discovery.json
+    volumeMounts:
+      - name: data-dir
+        mountPath: /home/kaspa/.rusty-kaspa
 
-    #volumes:
-    #  - name: discovery-config
-    #    configMap:
-    #      name: service-discovery-cm
+    volumes:
+      - name: data-dir
+        persistentVolumeClaim:
+          claimName: kaspad-pvc
 
   service:
     enabled: true
