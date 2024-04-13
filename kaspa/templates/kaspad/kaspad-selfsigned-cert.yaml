@@ -5,7 +5,7 @@ metadata:
 spec:
   isCA: true
   commonName: "{{ .Values.kaspad.kaspadApiDomain }}"
-  secretName: root-secret
+  secretName: kaspad-selfsigned-cert-secret
   privateKey:
     algorithm: ECDSA
     size: 256
