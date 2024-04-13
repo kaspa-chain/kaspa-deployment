@@ -1,0 +1,5 @@
+kaspad:
+  pods:
+    env:
+      - name: TZ
+        value: Asia/Bangkok

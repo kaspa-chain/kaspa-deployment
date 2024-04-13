@@ -1,0 +1,6 @@
+
+kaspad:
+  pods:
+    image:
+      tag: "v0.13.6.0"
+# Mon Mar 11 02:11:11 UTC 2024

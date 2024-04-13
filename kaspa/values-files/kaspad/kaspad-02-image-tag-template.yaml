@@ -1,0 +1,5 @@
+
+kaspad:
+  pods:
+    image:
+      tag: "<<image-tag>>"

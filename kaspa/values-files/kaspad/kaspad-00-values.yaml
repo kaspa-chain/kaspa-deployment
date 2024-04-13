@@ -1,0 +1,43 @@
+
+kaspad:
+  enabled: true
+  nameOverride: kaspad
+
+  ingress:
+    enabled: false
+
+  podDisruptionBudget:
+    enabled: false
+
+  pods:
+    controller: deployment
+    replicas: 1
+
+    resources:
+      limits:
+        cpu: 300m
+        memory: 256Mi
+      requests:
+        cpu: 150m
+        memory: 128Mi
+  
+    image:
+      name: asia-southeast1-docker.pkg.dev/its-artifact-commons/kaspa/kaspad
+
+    #volumeMounts:
+    #  - name: discovery-config
+    #    mountPath: /usr/src/app/src/config/grpc/development.json
+    #    subPath: discovery.json
+
+    #volumes:
+    #  - name: discovery-config
+    #    configMap:
+    #      name: service-discovery-cm
+
+  service:
+    enabled: false
+    ports:
+      - port: 16110
+        targetPort: 16110
+        protocol: TCP
+        name: grpc-mainnet
