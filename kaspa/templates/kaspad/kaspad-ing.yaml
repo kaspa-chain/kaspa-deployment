@@ -3,7 +3,7 @@ kind: Ingress
 metadata:
   name: kaspad-api-ing
   annotations:
-    nginx.ingress.kubernetes.io/backend-protocol: "GRPCS"
+    nginx.ingress.kubernetes.io/backend-protocol: "GRPC"
     #nginx.ingress.kubernetes.io/ssl-redirect: "true"
   #  nginx.ingress.kubernetes.io/proxy-body-size: 50m
   #  nginx.org/client-max-body-size: 50m
