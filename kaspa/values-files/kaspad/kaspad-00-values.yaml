@@ -13,7 +13,7 @@ kaspad:
     controller: deployment
     replicas: 1
     strategy:
-      type: recreate
+      type: Recreate
 
     resources:
       limits:
