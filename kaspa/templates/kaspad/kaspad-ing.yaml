@@ -13,7 +13,7 @@ spec:
   - host: "{{ .Values.kaspad.kaspadApiDomain }}"
     http:
       paths:
-      - pathType: ImplementationSpecific
+      - pathType: Prefix
         path: "/"
         backend:
           service:
