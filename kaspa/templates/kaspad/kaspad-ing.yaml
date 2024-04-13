@@ -2,7 +2,8 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: kaspad-api-ing
-  #annotations:
+  annotations:
+    nginx.ingress.kubernetes.io/backend-protocol: "GRPCS"
   #  nginx.ingress.kubernetes.io/proxy-body-size: 50m
   #  nginx.org/client-max-body-size: 50m
 spec:
