@@ -12,6 +12,13 @@ kaspad:
 
   pods:
     controller: deployment
+    command:
+      - kaspad
+    args:
+      - --utxoindex
+      - --rpclisten-borsh=public
+      - --yes
+      - --saferpc
     replicas: 1
     strategy:
       type: Recreate
