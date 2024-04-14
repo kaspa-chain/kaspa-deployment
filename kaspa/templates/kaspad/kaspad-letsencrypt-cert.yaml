@@ -1,0 +1,12 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: kaspad-letsencrypt-cert
+spec:
+  secretName: kaspad-letsencrypt-cert
+  issuerRef:
+    name: letsencrypt-http-issuer
+    kind: Issuer
+    group: cert-manager.io
+  dnsNames:
+    - "{{ .Values.kaspad.kaspadApiDomain }}"
