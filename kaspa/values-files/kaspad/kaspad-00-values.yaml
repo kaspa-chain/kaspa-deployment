@@ -18,7 +18,7 @@ kaspad:
       - --utxoindex
       - --rpclisten-borsh=public
       - --yes
-      - --unsaferpc
+      #- --unsaferpc
     replicas: 1
     strategy:
       type: Recreate
