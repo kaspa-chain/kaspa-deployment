@@ -11,3 +11,17 @@ dependencies:
     condition: kaspad.enabled
     repository: "https://charts.visonneau.fr/"
     version: "0.0.17"
+
+  ### kaspad-db-filter ###
+  - name: "generic-app"
+    alias: kaspad-db-filter
+    condition: kaspad-db-filter.enabled
+    repository: "https://charts.visonneau.fr/"
+    version: "0.0.17"
+
+  ### pgSQL ###
+  - name: "postgresql"
+    alias: postgresql
+    condition: postgresql.enabled
+    repository: "https://charts.bitnami.com/bitnami"
+    version: "14.0.5"

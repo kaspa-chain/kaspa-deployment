@@ -1,0 +1,5 @@
+
+kaspad-db-filter:
+  pods:
+    image:
+      tag: "<<image-tag>>"

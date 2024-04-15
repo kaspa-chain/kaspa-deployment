@@ -1,0 +1,10 @@
+kaspad-db-filter:
+  envAlias: dev
+  pods:
+    env:
+      - name: TZ
+        value: Asia/Bangkok
+
+      #DEBUG: "true"
+      #KASPAD_HOST_1: kaspad:16110
+      #SQL_URI: postgresql://postgres:mysecretpassword@kaspa_db:5432/postgres

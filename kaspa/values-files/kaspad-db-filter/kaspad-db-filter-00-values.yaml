@@ -1,0 +1,30 @@
+
+kaspad-db-filter:
+  enabled: true
+  nameOverride: kaspad-db-filter
+
+  ingress:
+    enabled: false
+
+  podDisruptionBudget:
+    enabled: false
+
+  pods:
+    controller: deployment
+    replicas: 1
+    #strategy:
+    #  type: Recreate
+
+    resources:
+      limits:
+        cpu: 200m
+        memory: 300Mi
+      requests:
+        cpu: 50m
+        memory: 100Mi
+
+    image:
+      name: supertypo/kaspa-db-filler
+
+  service:
+    enabled: false

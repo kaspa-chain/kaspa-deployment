@@ -1,0 +1,6 @@
+
+kaspad-db-filter:
+  pods:
+    image:
+      tag: "latest"
+# Mon Mar 11 03:35:57 UTC 2024
