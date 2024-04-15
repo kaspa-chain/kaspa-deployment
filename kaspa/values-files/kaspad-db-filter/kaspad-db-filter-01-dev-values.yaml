@@ -6,7 +6,7 @@ kaspad-db-filter:
         value: Asia/Bangkok
 
       - name: DEBUG
-        value: "true"
+        value: "false"
 
       - name: KASPAD_HOST_1
         value: node.kaspium.io:16110
