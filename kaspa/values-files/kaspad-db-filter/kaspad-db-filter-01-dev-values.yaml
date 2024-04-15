@@ -5,6 +5,14 @@ kaspad-db-filter:
       - name: TZ
         value: Asia/Bangkok
 
-      #DEBUG: "true"
-      #KASPAD_HOST_1: kaspad:16110
-      #SQL_URI: postgresql://postgres:mysecretpassword@kaspa_db:5432/postgres
+      - name: DEBUG
+        value: "true"
+
+      - name: KASPAD_HOST_1
+        value: https://node.kaspium.io:16110
+
+      - name: SQL_URI
+        valueFrom:
+          secretKeyRef:
+            name: postgres-secret
+            key: sqlUriDev
