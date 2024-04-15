@@ -1,6 +1,6 @@
 
 kaspad-db-filter:
-  enabled: true
+  enabled: false # TODO - Change this to true
   nameOverride: kaspad-db-filter
 
   ingress:
