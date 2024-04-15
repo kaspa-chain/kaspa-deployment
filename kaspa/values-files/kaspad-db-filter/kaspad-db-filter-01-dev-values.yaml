@@ -2,11 +2,11 @@ kaspad-db-filter:
   envAlias: dev
   pods:
     env:
-      #- name: TZ
-      #  value: Asia/Bangkok
+      - name: GRPC_TRACE
+        value: all
 
-      #- name: DEBUG
-      #  value: "false"
+      - name: GRPC_VERBOSITY
+        value: "debug"
 
       - name: KASPAD_HOST_1
         value: node.kaspium.io:16110
