@@ -16,9 +16,9 @@ kaspad:
       - kaspad
     args:
       - --utxoindex
-      - --rpclisten-borsh=public
-      - --yes
       - --archival
+      - --rpclisten-borsh=public
+      #- --yes
       #- --unsaferpc
     replicas: 1
     strategy:
