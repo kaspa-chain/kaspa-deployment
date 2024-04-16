@@ -4,3 +4,28 @@ kaspad-db-filter:
     env:
       - name: TZ
         value: Asia/Bangkok
+
+      - name: PgHost
+        value: "postgresql"
+
+      - name: PgPort
+        value: "5432"
+
+      - name: PgDatabase
+        value: "kaspa-filter"
+
+      - name: PgUser
+        value: "postgres"
+
+      - name: PgPassword
+        valueFrom:
+          secretKeyRef:
+            name: postgres-secret
+            key: PG_PASSWORD
+            optional: false
+
+      - name: KaspaNodeUrl
+        value: "https://node.kaspium.io:16110"
+
+      - name: KaspaStartBlockHash
+        value: "9a51928b6741ae50dc15c6a8b3b681eec348d826fd71b392711b105e26ca4fde"
