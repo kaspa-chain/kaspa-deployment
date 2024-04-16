@@ -2,5 +2,4 @@
 kaspad-db-filter:
   pods:
     image:
-      tag: "latest"
-# Mon Mar 11 02:11:11 UTC 2024
+      tag: "develop-e65fd7d"
