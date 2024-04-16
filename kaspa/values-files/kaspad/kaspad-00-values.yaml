@@ -31,8 +31,8 @@ kaspad:
 
     resources:
       limits:
-        cpu: 700m
-        memory: 3Gi
+        cpu: 1500m
+        memory: 4Gi
       requests:
         cpu: 350m
         memory: 2Gi
