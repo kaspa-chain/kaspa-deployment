@@ -1,5 +1,6 @@
-
 kaspad-db-filter:
+  envAlias: dev
   pods:
-    image:
-      tag: "develop-6aa936c"
+    env:
+      - name: TZ
+        value: Asia/Bangkok
