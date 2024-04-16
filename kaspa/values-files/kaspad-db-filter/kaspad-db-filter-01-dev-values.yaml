@@ -1,18 +1,5 @@
+
 kaspad-db-filter:
-  envAlias: dev
   pods:
-    env:
-      - name: GRPC_TRACE
-        value: all
-
-      - name: GRPC_VERBOSITY
-        value: "debug"
-
-      - name: KASPAD_HOST_1
-        value: node.kaspium.io:16110
-
-      - name: SQL_URI
-        valueFrom:
-          secretKeyRef:
-            name: postgres-secret
-            key: sqlUriDev
+    image:
+      tag: "develop-6aa936c"
