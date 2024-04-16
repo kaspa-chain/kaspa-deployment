@@ -17,6 +17,7 @@ kaspad:
     args:
       - --utxoindex
       - --archival
+      - --yes
       #- --rpclisten-borsh=public
       #- --yes
       #- --unsaferpc
@@ -41,11 +42,12 @@ kaspad:
       - containerPort: 16110
       - containerPort: 16111
     image:
-      name: asia-southeast1-docker.pkg.dev/its-artifact-commons/kaspa/kaspad
+      #name: asia-southeast1-docker.pkg.dev/its-artifact-commons/kaspa/kaspad
+      name: supertypo/rusty-kaspad
 
     volumeMounts:
       - name: data-dir
-        mountPath: /home/kaspa/.rusty-kaspa
+        mountPath: /app/data/ #/home/kaspa/.rusty-kaspa
 
     volumes:
       - name: data-dir
