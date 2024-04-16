@@ -2,4 +2,4 @@
 kaspad-db-filter:
   pods:
     image:
-      tag: "develop-6aa936c"
+      tag: "main-4ce5972"
