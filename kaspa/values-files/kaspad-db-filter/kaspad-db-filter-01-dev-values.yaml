@@ -21,7 +21,7 @@ kaspad-db-filter:
         valueFrom:
           secretKeyRef:
             name: postgres-secret
-            key: PG_PASSWORD
+            key: adminPasswordKey
             optional: false
 
       - name: KaspaNodeUrl
