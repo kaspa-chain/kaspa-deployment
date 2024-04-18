@@ -16,8 +16,10 @@ kaspad:
       - kaspad
     args:
       - --utxoindex
-      - --archival
-      - --yes
+      - --rpclisten=0.0.0.0
+      - --disable-upnp
+      #- --archival
+      #- --yes
       #- --rpclisten-borsh=public
       #- --yes
       #- --unsaferpc
