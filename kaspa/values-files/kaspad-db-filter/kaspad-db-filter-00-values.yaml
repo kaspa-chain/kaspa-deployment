@@ -1,6 +1,6 @@
 
 kaspad-db-filter:
-  enabled: true
+  enabled: false # will set to true soon
   nameOverride: kaspad-db-filter
 
   ingress:
@@ -10,7 +10,6 @@ kaspad-db-filter:
     enabled: false
 
   pods:
-    enabled: false # Will set to true soon
     controller: deployment
     replicas: 1
 
