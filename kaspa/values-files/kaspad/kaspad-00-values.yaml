@@ -17,7 +17,7 @@ kaspad:
     args:
       - --utxoindex
       - --rpclisten=0.0.0.0
-      - --disable-upnp
+      #- --disable-upnp
       - --appdir=/app/data/
       #- --archival
       #- --yes
