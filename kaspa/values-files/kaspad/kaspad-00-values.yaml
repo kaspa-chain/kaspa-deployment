@@ -51,7 +51,7 @@ kaspad:
 
     volumeMounts:
       - name: data-dir
-        mountPath: /app/data/ #/home/kaspa/.rusty-kaspa
+        mountPath: /home/kaspa/.kaspad #/app/data/ #/home/kaspa/.rusty-kaspa
 
     volumes:
       - name: data-dir
