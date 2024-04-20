@@ -28,10 +28,10 @@ kaspad:
     strategy:
       type: Recreate
 
-    #securityContext:
-    #  fsGroup: 999
-    #  runAsUser: 999
-    #  runAsGroup: 999
+    securityContext:
+      fsGroup: 999
+      runAsUser: 999
+      runAsGroup: 999
 
     resources:
       limits:
