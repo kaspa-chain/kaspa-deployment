@@ -29,3 +29,6 @@ kaspad-db-filter:
 
       - name: KaspaStartBlockHash
         value: "9a51928b6741ae50dc15c6a8b3b681eec348d826fd71b392711b105e26ca4fde"
+
+      - name: DelayMs
+        value: "1000"
