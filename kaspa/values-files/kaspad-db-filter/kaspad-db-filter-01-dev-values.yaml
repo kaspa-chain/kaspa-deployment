@@ -31,4 +31,4 @@ kaspad-db-filter:
         value: "66ad3bc029ad5d3860fe412a79e486d69c078c93363d0c70993763e55bca4805"
 
       - name: DelayMs
-        value: "100"
+        value: "10"
