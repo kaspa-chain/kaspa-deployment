@@ -1,0 +1,6 @@
+kaspad-rust:
+  envAlias: prod
+  pods:
+    env:
+      - name: TZ
+        value: Asia/Bangkok

@@ -12,6 +12,13 @@ dependencies:
     repository: "https://charts.visonneau.fr/"
     version: "0.0.17"
 
+  ### kaspad-rust ###
+  - name: "generic-app"
+    alias: kaspad-rust
+    condition: kaspad-rust.enabled
+    repository: "https://charts.visonneau.fr/"
+    version: "0.0.17"
+
   ### kaspad-db-filter ###
   - name: "generic-app"
     alias: kaspad-db-filter

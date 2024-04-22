@@ -1,0 +1,5 @@
+
+kaspad-rust:
+  pods:
+    image:
+      tag: "<<image-tag>>"

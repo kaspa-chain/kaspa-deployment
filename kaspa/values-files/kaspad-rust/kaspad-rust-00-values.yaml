@@ -1,0 +1,69 @@
+
+kaspad-rust:
+  enabled: true
+  nameOverride: kaspad-rust
+
+  ingress:
+    enabled: false
+
+  podDisruptionBudget:
+    enabled: false
+
+  pods:
+    controller: deployment
+    command:
+      - kaspad
+    args:
+      - --rpclisten=0.0.0.0
+      - --appdir=/app/data/
+      - --yes
+      #- --rpclisten-borsh=public
+      #- --archival
+      #- --disable-upnp
+      #- --utxoindex
+
+    replicas: 1
+    strategy:
+      type: Recreate
+
+    securityContext:
+      fsGroup: 999
+      runAsUser: 999
+      runAsGroup: 999
+
+    resources:
+      limits:
+        cpu: 3500m
+        memory: 8Gi
+      requests:
+        cpu: 1350m
+        memory: 4Gi
+  
+    ports:
+      - containerPort: 16110
+      - containerPort: 16111
+    image:
+      name: asia-southeast1-docker.pkg.dev/its-artifact-commons/kaspa/kaspad
+      #name: asia-southeast1-docker.pkg.dev/its-artifact-commons/kaspa/kaspad-go
+
+    volumeMounts:
+      - name: data-dir
+        mountPath: /app/data/ #/home/kaspa/.rusty-kaspa
+
+    volumes:
+      - name: data-dir
+        persistentVolumeClaim:
+          claimName: kaspad-rust-pvc
+
+  service:
+    enabled: true
+    ports:
+      - port: 16110
+        targetPort: 16110
+        protocol: TCP
+        name: grpc-mainnet
+
+      - port: 16111
+        targetPort: 16111
+        protocol: TCP
+        name: p2p-mainnet
