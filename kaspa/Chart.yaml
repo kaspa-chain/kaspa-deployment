@@ -26,9 +26,8 @@ dependencies:
     repository: "https://charts.bitnami.com/bitnami"
     version: "14.0.5"
 
-  ### Memcached ###
-  - name: "memcached"
-    alias: memcached
-    condition: memcached.enabled
+  - name: "redis"
+    alias: redis
+    condition: redis.enabled
     repository: "https://charts.bitnami.com/bitnami"
-    version: "6.8.1"
+    version: "18.13.0"

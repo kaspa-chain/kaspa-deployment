@@ -1,7 +1,0 @@
-### Memcache ###
-memcached:
-  enabled: true
-  fullnameOverride: memcached
-  nameOverride: memcached
-  serviceAccount:
-    create: false
