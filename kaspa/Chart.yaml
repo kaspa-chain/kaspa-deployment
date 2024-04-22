@@ -25,3 +25,10 @@ dependencies:
     condition: postgresql.enabled
     repository: "https://charts.bitnami.com/bitnami"
     version: "14.0.5"
+
+  ### Memcached ###
+  - name: "memcached"
+    alias: memcached
+    condition: memcached.enabled
+    repository: "https://charts.bitnami.com/bitnami"
+    version: "6.8.1"
