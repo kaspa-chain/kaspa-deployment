@@ -28,7 +28,7 @@ kaspad-db-filter:
         value: "http://kaspa-dev-kaspad:16110" #"https://node.kaspium.io:16110"
 
       - name: KaspaStartBlockHash
-        value: "66ad3bc029ad5d3860fe412a79e486d69c078c93363d0c70993763e55bca4805"
+        value: "002a557067a5b50514be11e8165e30202d3e86283fc02c2b38621eb817320ce0"
 
       - name: DelayMs
         value: "10"
