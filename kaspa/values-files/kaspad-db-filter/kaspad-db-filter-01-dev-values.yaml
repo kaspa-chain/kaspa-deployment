@@ -25,7 +25,7 @@ kaspad-db-filter:
             optional: false
 
       - name: KaspaNodeUrl
-        value: "http://kaspa-dev-kaspad:16110" #"https://node.kaspium.io:16110"
+        value: "http://kaspa-dev-kaspad-rust:16110" #"https://node.kaspium.io:16110"
 
       - name: KaspaStartBlockHash
         value: "002a557067a5b50514be11e8165e30202d3e86283fc02c2b38621eb817320ce0"
