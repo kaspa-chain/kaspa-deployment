@@ -44,7 +44,6 @@ kaspad-rust:
       - containerPort: 16111
     image:
       name: asia-southeast1-docker.pkg.dev/its-artifact-commons/kaspa/kaspad
-      #name: asia-southeast1-docker.pkg.dev/its-artifact-commons/kaspa/kaspad-go
 
     volumeMounts:
       - name: data-dir
