@@ -2,7 +2,7 @@
 kaspad:
   kaspadApiDomain: grpc.kaspa-chain.net
   enabled: true
-  nameOverride: kaspad
+  nameOverride: kaspad-go
 
   ingress:
     enabled: false
@@ -15,14 +15,13 @@ kaspad:
     command:
       - kaspad
     args:
-      #- --utxoindex
+      - --utxoindex
       - --rpclisten=0.0.0.0
+      - --appdir=/app/data/
+      - --archival
+      - --yes
       #- --disable-upnp
-      #- --appdir=/app/data/
-      #- --archival
-      #- --yes
       #- --rpclisten-borsh=public
-      #- --yes
       #- --unsaferpc
     replicas: 1
     strategy:
@@ -51,12 +50,12 @@ kaspad:
 
     volumeMounts:
       - name: data-dir
-        mountPath: /home/kaspa/.kaspad #/app/data/ #/home/kaspa/.rusty-kaspa
+        mountPath: /app/data/ #/home/kaspa/.kaspad   #/home/kaspa/.rusty-kaspa
 
     volumes:
       - name: data-dir
         persistentVolumeClaim:
-          claimName: kaspad-pvc
+          claimName: kaspad-go-pvc
 
   service:
     enabled: true
