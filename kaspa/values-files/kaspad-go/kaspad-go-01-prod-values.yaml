@@ -1,4 +1,4 @@
-kaspad:
+kaspad-go:
   envAlias: prod
   pods:
     env:

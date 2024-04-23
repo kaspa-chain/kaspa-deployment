@@ -1,5 +1,5 @@
 
-kaspad:
+kaspad-go:
   kaspadApiDomain: grpc.kaspa-chain.net
   enabled: true
   nameOverride: kaspad-go
@@ -44,8 +44,6 @@ kaspad:
       - containerPort: 16110
       - containerPort: 16111
     image:
-      #name: asia-southeast1-docker.pkg.dev/its-artifact-commons/kaspa/kaspad
-      #name: supertypo/rusty-kaspad
       name: asia-southeast1-docker.pkg.dev/its-artifact-commons/kaspa/kaspad-go
 
     volumeMounts:
