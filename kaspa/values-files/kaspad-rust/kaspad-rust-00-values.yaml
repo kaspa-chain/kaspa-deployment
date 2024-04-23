@@ -18,8 +18,8 @@ kaspad-rust:
       - --appdir=/app/data/
       - --yes
       - --utxoindex
+      - --archival
       #- --rpclisten-borsh=public
-      #- --archival
       #- --disable-upnp
 
     replicas: 1
