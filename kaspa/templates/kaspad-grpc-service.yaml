@@ -17,5 +17,6 @@ spec:
   selector:
   selector:
     app.kubernetes.io/instance: kaspa-{{ .Values.kaspad.envAlias }}
-    app.kubernetes.io/name: kaspad
+    #app.kubernetes.io/name: kaspad
+    app.kubernetes.io/name: kaspad-rust
   type: LoadBalancer
