@@ -25,10 +25,10 @@ kaspad-db-filter:
             optional: false
 
       - name: KaspaNodeUrl
-        value: "https://node.kaspium.io:16110" # "http://kaspa-dev-kaspad:16110"
+        value: "http://kaspa-dev-kaspad-rust:16110"
 
       - name: KaspaStartBlockHash
-        value: "19a7faf49aee90745855a665ad1300cebab1f11fbe19b9247d20fb9a43a23d55"
+        value: "dafc4f8f1057b59b6ec8c6e82436fabe49bd946633edcdb7f228c621bf299a26"
 
       - name: DelayMs
         value: "1000"
