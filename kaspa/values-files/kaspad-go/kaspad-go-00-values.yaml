@@ -19,7 +19,6 @@ kaspad-go:
       - --rpclisten=0.0.0.0
       - --appdir=/app/data/
       - --archival
-      - --yes
       #- --disable-upnp
       #- --rpclisten-borsh=public
       #- --unsaferpc
