@@ -17,10 +17,10 @@ kaspad-rust:
       - --rpclisten=0.0.0.0
       - --appdir=/app/data/
       - --yes
+      - --utxoindex
       #- --rpclisten-borsh=public
       #- --archival
       #- --disable-upnp
-      #- --utxoindex
 
     replicas: 1
     strategy:
