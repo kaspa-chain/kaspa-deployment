@@ -16,7 +16,7 @@ spec:
     targetPort: 16111
   selector:
   selector:
-    app.kubernetes.io/instance: kaspa-{{ .Values.kaspad.envAlias }}
+    app.kubernetes.io/instance: kaspa-dev
     #app.kubernetes.io/name: kaspad
     app.kubernetes.io/name: kaspad-rust
   type: LoadBalancer
