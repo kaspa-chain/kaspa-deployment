@@ -23,7 +23,7 @@ kaspad-rust:
           mountPath: /data
         resources:
           limits:
-            cpu: 100m
+            cpu: 300m
             memory: 200Mi
           requests:
             cpu: 50m
