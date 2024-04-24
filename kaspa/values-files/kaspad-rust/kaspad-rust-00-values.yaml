@@ -10,33 +10,33 @@ kaspad-rust:
     enabled: false
 
   pods:
-#    additionalContainers:
-#      - name: kaspa-archive
-#        image: asia-southeast1-docker.pkg.dev/its-artifact-commons/kaspa/kaspa-misc:develop-d2022f4
-#        command: ["ruby"]
-#        args: [ "/scripts/kaspa-data-archive.rb" ]
-#        imagePullPolicy: IfNotPresent
-#        volumeMounts:
-#        - name: data-dir
-#          mountPath: /app/data/
-#        - name: temp-dir
-#          mountPath: /data
-#        resources:
-#          limits:
-#            cpu: 100m
-#            memory: 200Mi
-#          requests:
-#            cpu: 50m
-#            memory: 100Mi
-#        env:
-#          - name: ARCHIVE_SRC_DIR
-#            value: /app/data/kaspa-mainnet
-#          - name: ARCHIVE_DST_DIR
-#            value: /data
-#          - name: ARCHIVE_DELAY_SEC
-#            value: '43200' # 12 hours
-#          - name: ARCHIVE_KASPAD_TYPE
-#            value: rust
+    additionalContainers:
+      - name: kaspa-archive
+        image: asia-southeast1-docker.pkg.dev/its-artifact-commons/kaspa/kaspa-misc:develop-6979792
+        command: ["ruby"]
+        args: [ "/scripts/kaspa-data-archive.rb" ]
+        imagePullPolicy: IfNotPresent
+        volumeMounts:
+        - name: data-dir
+          mountPath: /app/data/
+        - name: temp-dir
+          mountPath: /data
+        resources:
+          limits:
+            cpu: 100m
+            memory: 200Mi
+          requests:
+            cpu: 50m
+            memory: 100Mi
+        env:
+          - name: ARCHIVE_SRC_DIR
+            value: /app/data/kaspa-mainnet
+          - name: ARCHIVE_DST_DIR
+            value: /data
+          - name: ARCHIVE_DELAY_SEC
+            value: '43200' # 12 hours
+          - name: ARCHIVE_KASPAD_TYPE
+            value: rust
 
     controller: deployment
     command:
