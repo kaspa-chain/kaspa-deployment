@@ -12,7 +12,7 @@ kaspad-rust:
   pods:
     additionalContainers:
       - name: kaspa-archive
-        image: asia-southeast1-docker.pkg.dev/its-artifact-commons/kaspa/kaspa-misc:develop-0f6b008
+        image: asia-southeast1-docker.pkg.dev/its-artifact-commons/kaspa/kaspa-misc:develop-d2022f4
         command: ["ruby"]
         args: [ "/scripts/kaspa-data-archive.rb" ]
         imagePullPolicy: IfNotPresent
@@ -34,7 +34,7 @@ kaspad-rust:
           - name: ARCHIVE_DST_DIR
             value: /data
           - name: ARCHIVE_DELAY_SEC
-            value: '3600'
+            value: '43200' # 12 hours
           - name: ARCHIVE_KASPAD_TYPE
             value: rust
 
