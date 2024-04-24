@@ -10,6 +10,25 @@ kaspad-rust:
     enabled: false
 
   pods:
+    additionalContainers:
+      - name: kaspa-archive
+        image: asia-southeast1-docker.pkg.dev/its-artifact-commons/kaspa/kaspa-misc:develop-27624bc
+        command: ["ruby"]
+        args: [ "/scripts/kaspa-data-archive.rb" ]
+        imagePullPolicy: IfNotPresent
+        volumeMounts:
+        - name: data-dir
+          mountPath: /app/data/
+        - name: temp-dir
+          mountPath: /data
+        resources:
+          limits:
+            cpu: 100m
+            memory: 200Mi
+          requests:
+            cpu: 50m
+            memory: 100Mi
+
     controller: deployment
     command:
       - kaspad
@@ -53,6 +72,8 @@ kaspad-rust:
       - name: data-dir
         persistentVolumeClaim:
           claimName: kaspad-rust-pvc
+      - name: temp-dir
+        emptyDir: {}
 
   service:
     enabled: true
