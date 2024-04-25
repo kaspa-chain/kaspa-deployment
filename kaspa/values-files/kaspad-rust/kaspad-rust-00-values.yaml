@@ -21,6 +21,9 @@ kaspad-rust:
           mountPath: /app/data/
         - name: temp-dir
           mountPath: /data
+        - name: secrets
+          readOnly: true
+          mountPath: "/secrets"
         resources:
           limits:
             cpu: 300m
@@ -37,6 +40,8 @@ kaspad-rust:
             value: '43200' # 12 hours
           - name: ARCHIVE_KASPAD_TYPE
             value: rust
+          - name: GOOGLE_APPLICATION_CREDENTIALS 
+            value: /secrets/gcp-sa.json
 
     controller: deployment
     command:
@@ -83,6 +88,9 @@ kaspad-rust:
           claimName: kaspad-rust-pvc
       - name: temp-dir
         emptyDir: {}
+      - name: secrets
+        secret:
+          secretName: kaspa-gcp-sa-secret
 
   service:
     enabled: true
