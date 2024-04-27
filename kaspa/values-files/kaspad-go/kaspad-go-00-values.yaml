@@ -1,7 +1,7 @@
 
 kaspad-go:
   kaspadApiDomain: grpc.kaspa-chain.net
-  enabled: false # Disable it
+  enabled: true
   nameOverride: kaspad-go
 
   ingress:

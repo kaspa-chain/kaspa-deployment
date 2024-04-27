@@ -1,6 +1,6 @@
 
 kaspad-rust:
-  enabled: true
+  enabled: false  # Disable it
   nameOverride: kaspad-rust
 
   ingress:
